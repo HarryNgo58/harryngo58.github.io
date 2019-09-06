@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function random_select() {
+            var list_team = ['Tottenham', 'Manchester United', 'Manchester City', 'Arsenal', 'Chelsea', 'Liverpool',
+                'Barcelona', 'Real Madrid', 'Atlético Madrid', 'Valencia',
+                'Juventus', 'Intermilan', 'AC milan', 'Napoli',
+                'PSG', 'AS Monaco', 'Lyon', 'Marseille',
+                'Bayern', 'Dortmund'];
+            var res = list_team[Math.floor(Math.random() * list_team.length)];
+            console.log(res);
+            document.getElementById("res").value = res;
+        }
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            /* width: 33.33%; */
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            border-radius: 2px;
+            margin: 0 auto;
+        }
+
+        input[name="res"] {
+            pointer-events: none;
+            padding: 10px 50px;
+            margin: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2 style="text-align: center">Random select your team</h2>
+
+    <div class="row">
+        <div class="column" style="width: 100px">England</div>
+        <div class="column">
+            <img src="image/img_tot.png" alt="TOT">
+        </div>
+        <div class="column">
+            <img src="image/img_mu.png" alt="MU">
+        </div>
+        <div class="column">
+            <img src="image/img_mc.png" alt="MC">
+        </div>
+        <div class="column">
+            <img src="image/img_ars.png" alt="ARS">
+        </div>
+        <div class="column">
+            <img src="image/img_chel.png" alt="CHEL">
+        </div>
+        <div class="column">
+            <img src="image/img_liv.png" alt="LIV">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="width: 100px">Spain</div>
+        <div class="column">
+            <img src="image/img_bar.png" alt="BAR">
+        </div>
+        <div class="column">
+            <img src="image/img_real.png" alt="REAL">
+        </div>
+        <div class="column">
+            <img src="image/img_alt.png" alt="ALM">
+        </div>
+        <div class="column">
+            <img src="image/img_valencia.png" alt="VAL">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="width: 100px">Italia</div>
+        <div class="column">
+            <img src="image/img_juve.png" alt="JUVE">
+        </div>
+        <div class="column">
+            <img src="image/img_inter.png" alt="INTER">
+        </div>
+        <div class="column">
+            <img src="image/img_milan.png" alt="MILAN">
+        </div>
+        <div class="column">
+            <img src="image/img_napoli.png" alt="NAPOLI">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="width: 100px">France</div>
+        <div class="column">
+            <img src="image/img_psg.png" alt="PSG">
+        </div>
+        <div class="column">
+            <img src="image/img_monaco.png" alt="MONACO">
+        </div>
+        <div class="column">
+            <img src="image/img_lyon.png" alt="LYON">
+        </div>
+        <div class="column">
+            <img src="image/img_mar.png" alt="MAR">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="width: 100px">Germany</div>
+        <div class="column">
+            <img src="image/img_bayern.png" alt="BAYERN">
+        </div>
+        <div class="column">
+            <img src="image/img_dortmund.png" alt="DOR">
+        </div>
+    </div>
+    <div style="text-align: center"><input type="text" id="res" name="res"></div>
+    <button onclick="random_select()">Select team</button>
+</body>
+
+
+</html>
